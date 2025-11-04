@@ -100,7 +100,7 @@ CREATE TABLE payment (
     payment_id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id             INT NOT NULL,
     account_id          UUID NOT NULL,
-    card_id             INT NOT NULL,
+    card_id             INT,
     amount              NUMERIC(10, 2) NOT NULL,
     date_time           TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     status              VARCHAR(35) NOT NULL,
